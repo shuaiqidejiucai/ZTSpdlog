@@ -3,7 +3,9 @@ CONFIG -= qt
 TEMPLATE = lib
 CONFIG += staticlib
 DEFINES += SPDLOG_BUILD_SHARED SPDLOG_COMPILED_LIB
-include(../common.pri)
+
+shareRoot = $$PWD/../share
+include($$shareRoot/common/common.pri)
 CONFIG += c++11
 msvc {
     QMAKE_CXXFLAGS += /utf-8
